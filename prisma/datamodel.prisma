@@ -5,6 +5,7 @@ type User{
     whatsapp:String! @unique
     town: String!
     city:String!
+    country:String!
     bloodGroup:String!
     image:String!
 }

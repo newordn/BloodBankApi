@@ -114,6 +114,8 @@ export type UserOrderByInput =
   | "town_DESC"
   | "city_ASC"
   | "city_DESC"
+  | "country_ASC"
+  | "country_DESC"
   | "bloodGroup_ASC"
   | "bloodGroup_DESC"
   | "image_ASC"
@@ -128,6 +130,7 @@ export interface UserCreateInput {
   whatsapp: String;
   town: String;
   city: String;
+  country: String;
   bloodGroup: String;
   image: String;
 }
@@ -138,6 +141,7 @@ export interface UserUpdateInput {
   whatsapp?: Maybe<String>;
   town?: Maybe<String>;
   city?: Maybe<String>;
+  country?: Maybe<String>;
   bloodGroup?: Maybe<String>;
   image?: Maybe<String>;
 }
@@ -148,6 +152,7 @@ export interface UserUpdateManyMutationInput {
   whatsapp?: Maybe<String>;
   town?: Maybe<String>;
   city?: Maybe<String>;
+  country?: Maybe<String>;
   bloodGroup?: Maybe<String>;
   image?: Maybe<String>;
 }
@@ -237,6 +242,20 @@ export interface UserWhereInput {
   city_not_starts_with?: Maybe<String>;
   city_ends_with?: Maybe<String>;
   city_not_ends_with?: Maybe<String>;
+  country?: Maybe<String>;
+  country_not?: Maybe<String>;
+  country_in?: Maybe<String[] | String>;
+  country_not_in?: Maybe<String[] | String>;
+  country_lt?: Maybe<String>;
+  country_lte?: Maybe<String>;
+  country_gt?: Maybe<String>;
+  country_gte?: Maybe<String>;
+  country_contains?: Maybe<String>;
+  country_not_contains?: Maybe<String>;
+  country_starts_with?: Maybe<String>;
+  country_not_starts_with?: Maybe<String>;
+  country_ends_with?: Maybe<String>;
+  country_not_ends_with?: Maybe<String>;
   bloodGroup?: Maybe<String>;
   bloodGroup_not?: Maybe<String>;
   bloodGroup_in?: Maybe<String[] | String>;
@@ -330,6 +349,7 @@ export interface UserPreviousValues {
   whatsapp: String;
   town: String;
   city: String;
+  country: String;
   bloodGroup: String;
   image: String;
 }
@@ -343,6 +363,7 @@ export interface UserPreviousValuesPromise
   whatsapp: () => Promise<String>;
   town: () => Promise<String>;
   city: () => Promise<String>;
+  country: () => Promise<String>;
   bloodGroup: () => Promise<String>;
   image: () => Promise<String>;
 }
@@ -356,6 +377,7 @@ export interface UserPreviousValuesSubscription
   whatsapp: () => Promise<AsyncIterator<String>>;
   town: () => Promise<AsyncIterator<String>>;
   city: () => Promise<AsyncIterator<String>>;
+  country: () => Promise<AsyncIterator<String>>;
   bloodGroup: () => Promise<AsyncIterator<String>>;
   image: () => Promise<AsyncIterator<String>>;
 }
@@ -409,6 +431,7 @@ export interface User {
   whatsapp: String;
   town: String;
   city: String;
+  country: String;
   bloodGroup: String;
   image: String;
 }
@@ -420,6 +443,7 @@ export interface UserPromise extends Promise<User>, Fragmentable {
   whatsapp: () => Promise<String>;
   town: () => Promise<String>;
   city: () => Promise<String>;
+  country: () => Promise<String>;
   bloodGroup: () => Promise<String>;
   image: () => Promise<String>;
 }
@@ -433,6 +457,7 @@ export interface UserSubscription
   whatsapp: () => Promise<AsyncIterator<String>>;
   town: () => Promise<AsyncIterator<String>>;
   city: () => Promise<AsyncIterator<String>>;
+  country: () => Promise<AsyncIterator<String>>;
   bloodGroup: () => Promise<AsyncIterator<String>>;
   image: () => Promise<AsyncIterator<String>>;
 }
@@ -446,6 +471,7 @@ export interface UserNullablePromise
   whatsapp: () => Promise<String>;
   town: () => Promise<String>;
   city: () => Promise<String>;
+  country: () => Promise<String>;
   bloodGroup: () => Promise<String>;
   image: () => Promise<String>;
 }

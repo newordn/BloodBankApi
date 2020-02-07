@@ -57,6 +57,7 @@ type User {
   whatsapp: String!
   town: String!
   city: String!
+  country: String!
   bloodGroup: String!
   image: String!
 }
@@ -74,6 +75,7 @@ input UserCreateInput {
   whatsapp: String!
   town: String!
   city: String!
+  country: String!
   bloodGroup: String!
   image: String!
 }
@@ -96,6 +98,8 @@ enum UserOrderByInput {
   town_DESC
   city_ASC
   city_DESC
+  country_ASC
+  country_DESC
   bloodGroup_ASC
   bloodGroup_DESC
   image_ASC
@@ -109,6 +113,7 @@ type UserPreviousValues {
   whatsapp: String!
   town: String!
   city: String!
+  country: String!
   bloodGroup: String!
   image: String!
 }
@@ -137,6 +142,7 @@ input UserUpdateInput {
   whatsapp: String
   town: String
   city: String
+  country: String
   bloodGroup: String
   image: String
 }
@@ -147,6 +153,7 @@ input UserUpdateManyMutationInput {
   whatsapp: String
   town: String
   city: String
+  country: String
   bloodGroup: String
   image: String
 }
@@ -236,6 +243,20 @@ input UserWhereInput {
   city_not_starts_with: String
   city_ends_with: String
   city_not_ends_with: String
+  country: String
+  country_not: String
+  country_in: [String!]
+  country_not_in: [String!]
+  country_lt: String
+  country_lte: String
+  country_gt: String
+  country_gte: String
+  country_contains: String
+  country_not_contains: String
+  country_starts_with: String
+  country_not_starts_with: String
+  country_ends_with: String
+  country_not_ends_with: String
   bloodGroup: String
   bloodGroup_not: String
   bloodGroup_in: [String!]

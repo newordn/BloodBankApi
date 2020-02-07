@@ -6,7 +6,7 @@ type Query{
     users:[User!]!
 }
 type Mutation{
-    user(name:String!,contact:String!,whatsapp:String!,town:String!,city:String!,bloodGroup:String!,image:Upload):User
+    user(name:String!,contact:String!,whatsapp:String!,town:String!,city:String!,country:String!,bloodGroup:String!,image:Upload):User
 }
 type User{
     id: ID!
@@ -15,6 +15,7 @@ type User{
     whatsapp:String!
     town: String!
     city:String!
+    country:String!
     bloodGroup:String!
     image:String!
 }
