@@ -1,0 +1,10 @@
+type User{
+    id: ID! @id
+    name:String!
+    contact:String! @unique
+    whatsapp:String! @unique
+    town: String!
+    city:String!
+    bloodGroup:String!
+    profilPic:String!
+}
