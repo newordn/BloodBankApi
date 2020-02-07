@@ -6,5 +6,5 @@ type User{
     town: String!
     city:String!
     bloodGroup:String!
-    profilPic:String!
+    image:String!
 }

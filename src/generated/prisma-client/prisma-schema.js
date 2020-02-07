@@ -58,7 +58,7 @@ type User {
   town: String!
   city: String!
   bloodGroup: String!
-  profilPic: String!
+  image: String!
 }
 
 type UserConnection {
@@ -75,7 +75,7 @@ input UserCreateInput {
   town: String!
   city: String!
   bloodGroup: String!
-  profilPic: String!
+  image: String!
 }
 
 type UserEdge {
@@ -98,8 +98,8 @@ enum UserOrderByInput {
   city_DESC
   bloodGroup_ASC
   bloodGroup_DESC
-  profilPic_ASC
-  profilPic_DESC
+  image_ASC
+  image_DESC
 }
 
 type UserPreviousValues {
@@ -110,7 +110,7 @@ type UserPreviousValues {
   town: String!
   city: String!
   bloodGroup: String!
-  profilPic: String!
+  image: String!
 }
 
 type UserSubscriptionPayload {
@@ -138,7 +138,7 @@ input UserUpdateInput {
   town: String
   city: String
   bloodGroup: String
-  profilPic: String
+  image: String
 }
 
 input UserUpdateManyMutationInput {
@@ -148,7 +148,7 @@ input UserUpdateManyMutationInput {
   town: String
   city: String
   bloodGroup: String
-  profilPic: String
+  image: String
 }
 
 input UserWhereInput {
@@ -250,20 +250,20 @@ input UserWhereInput {
   bloodGroup_not_starts_with: String
   bloodGroup_ends_with: String
   bloodGroup_not_ends_with: String
-  profilPic: String
-  profilPic_not: String
-  profilPic_in: [String!]
-  profilPic_not_in: [String!]
-  profilPic_lt: String
-  profilPic_lte: String
-  profilPic_gt: String
-  profilPic_gte: String
-  profilPic_contains: String
-  profilPic_not_contains: String
-  profilPic_starts_with: String
-  profilPic_not_starts_with: String
-  profilPic_ends_with: String
-  profilPic_not_ends_with: String
+  image: String
+  image_not: String
+  image_in: [String!]
+  image_not_in: [String!]
+  image_lt: String
+  image_lte: String
+  image_gt: String
+  image_gte: String
+  image_contains: String
+  image_not_contains: String
+  image_starts_with: String
+  image_not_starts_with: String
+  image_ends_with: String
+  image_not_ends_with: String
   AND: [UserWhereInput!]
   OR: [UserWhereInput!]
   NOT: [UserWhereInput!]

@@ -116,8 +116,8 @@ export type UserOrderByInput =
   | "city_DESC"
   | "bloodGroup_ASC"
   | "bloodGroup_DESC"
-  | "profilPic_ASC"
-  | "profilPic_DESC";
+  | "image_ASC"
+  | "image_DESC";
 
 export type MutationType = "CREATED" | "UPDATED" | "DELETED";
 
@@ -129,7 +129,7 @@ export interface UserCreateInput {
   town: String;
   city: String;
   bloodGroup: String;
-  profilPic: String;
+  image: String;
 }
 
 export interface UserUpdateInput {
@@ -139,7 +139,7 @@ export interface UserUpdateInput {
   town?: Maybe<String>;
   city?: Maybe<String>;
   bloodGroup?: Maybe<String>;
-  profilPic?: Maybe<String>;
+  image?: Maybe<String>;
 }
 
 export interface UserUpdateManyMutationInput {
@@ -149,7 +149,7 @@ export interface UserUpdateManyMutationInput {
   town?: Maybe<String>;
   city?: Maybe<String>;
   bloodGroup?: Maybe<String>;
-  profilPic?: Maybe<String>;
+  image?: Maybe<String>;
 }
 
 export interface UserWhereInput {
@@ -251,20 +251,20 @@ export interface UserWhereInput {
   bloodGroup_not_starts_with?: Maybe<String>;
   bloodGroup_ends_with?: Maybe<String>;
   bloodGroup_not_ends_with?: Maybe<String>;
-  profilPic?: Maybe<String>;
-  profilPic_not?: Maybe<String>;
-  profilPic_in?: Maybe<String[] | String>;
-  profilPic_not_in?: Maybe<String[] | String>;
-  profilPic_lt?: Maybe<String>;
-  profilPic_lte?: Maybe<String>;
-  profilPic_gt?: Maybe<String>;
-  profilPic_gte?: Maybe<String>;
-  profilPic_contains?: Maybe<String>;
-  profilPic_not_contains?: Maybe<String>;
-  profilPic_starts_with?: Maybe<String>;
-  profilPic_not_starts_with?: Maybe<String>;
-  profilPic_ends_with?: Maybe<String>;
-  profilPic_not_ends_with?: Maybe<String>;
+  image?: Maybe<String>;
+  image_not?: Maybe<String>;
+  image_in?: Maybe<String[] | String>;
+  image_not_in?: Maybe<String[] | String>;
+  image_lt?: Maybe<String>;
+  image_lte?: Maybe<String>;
+  image_gt?: Maybe<String>;
+  image_gte?: Maybe<String>;
+  image_contains?: Maybe<String>;
+  image_not_contains?: Maybe<String>;
+  image_starts_with?: Maybe<String>;
+  image_not_starts_with?: Maybe<String>;
+  image_ends_with?: Maybe<String>;
+  image_not_ends_with?: Maybe<String>;
   AND?: Maybe<UserWhereInput[] | UserWhereInput>;
   OR?: Maybe<UserWhereInput[] | UserWhereInput>;
   NOT?: Maybe<UserWhereInput[] | UserWhereInput>;
@@ -331,7 +331,7 @@ export interface UserPreviousValues {
   town: String;
   city: String;
   bloodGroup: String;
-  profilPic: String;
+  image: String;
 }
 
 export interface UserPreviousValuesPromise
@@ -344,7 +344,7 @@ export interface UserPreviousValuesPromise
   town: () => Promise<String>;
   city: () => Promise<String>;
   bloodGroup: () => Promise<String>;
-  profilPic: () => Promise<String>;
+  image: () => Promise<String>;
 }
 
 export interface UserPreviousValuesSubscription
@@ -357,7 +357,7 @@ export interface UserPreviousValuesSubscription
   town: () => Promise<AsyncIterator<String>>;
   city: () => Promise<AsyncIterator<String>>;
   bloodGroup: () => Promise<AsyncIterator<String>>;
-  profilPic: () => Promise<AsyncIterator<String>>;
+  image: () => Promise<AsyncIterator<String>>;
 }
 
 export interface UserEdge {
@@ -410,7 +410,7 @@ export interface User {
   town: String;
   city: String;
   bloodGroup: String;
-  profilPic: String;
+  image: String;
 }
 
 export interface UserPromise extends Promise<User>, Fragmentable {
@@ -421,7 +421,7 @@ export interface UserPromise extends Promise<User>, Fragmentable {
   town: () => Promise<String>;
   city: () => Promise<String>;
   bloodGroup: () => Promise<String>;
-  profilPic: () => Promise<String>;
+  image: () => Promise<String>;
 }
 
 export interface UserSubscription
@@ -434,7 +434,7 @@ export interface UserSubscription
   town: () => Promise<AsyncIterator<String>>;
   city: () => Promise<AsyncIterator<String>>;
   bloodGroup: () => Promise<AsyncIterator<String>>;
-  profilPic: () => Promise<AsyncIterator<String>>;
+  image: () => Promise<AsyncIterator<String>>;
 }
 
 export interface UserNullablePromise
@@ -447,7 +447,7 @@ export interface UserNullablePromise
   town: () => Promise<String>;
   city: () => Promise<String>;
   bloodGroup: () => Promise<String>;
-  profilPic: () => Promise<String>;
+  image: () => Promise<String>;
 }
 
 export interface UserConnection {
